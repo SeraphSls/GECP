@@ -1,9 +1,6 @@
 package br.com.gecp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Endereco {
@@ -18,6 +15,7 @@ public class Endereco {
 
     private String observacao;
 
+    @ManyToOne(targetEntity = Logradouro.class)   
     private Logradouro logradouro;
 
 

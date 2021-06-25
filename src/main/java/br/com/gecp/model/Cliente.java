@@ -5,6 +5,8 @@ import java.util.Date;
 
 @Entity
 public class Cliente {
+
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
@@ -13,11 +15,14 @@ public class Cliente {
 
     private Date dataCadastro;
 
+    @ManyToOne(targetEntity = Telefone.class)
     private Telefone telefone;
 
-    @ManyToOne
+    @ManyToOne(targetEntity=Email.class)
     private Email email;
 
+
+    @ManyToOne(targetEntity=Endereco.class)
     private Endereco endereco;
 
 
