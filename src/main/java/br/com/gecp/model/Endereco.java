@@ -8,7 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class Endereco {
 
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long id;
 
     private Integer numero;
 

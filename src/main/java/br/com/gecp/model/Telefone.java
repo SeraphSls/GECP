@@ -7,13 +7,18 @@ import javax.persistence.Id;
 
 @Entity
 public class Telefone {
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long id;
 
     private String numero;
 
     private String tipo;
 
 
+    public Long getId() {
+        return id;
+    }
 
 
     public String getNumero() {

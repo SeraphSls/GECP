@@ -6,7 +6,9 @@ import javax.persistence.Id;
 
 public class Logradouro {
 
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long id;
 
 
 
