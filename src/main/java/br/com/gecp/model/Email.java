@@ -7,13 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Email {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    private long ID;
 
-    public long getID() {
-        return ID;
-    }
+
 
     public String getEmailContato() {
         return emailContato;
