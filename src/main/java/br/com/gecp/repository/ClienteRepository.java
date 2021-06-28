@@ -1,4 +1,4 @@
-package br.com.gecp.service;
+package br.com.gecp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
