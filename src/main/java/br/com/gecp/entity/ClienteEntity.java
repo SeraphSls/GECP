@@ -1,10 +1,11 @@
-package br.com.gecp.model;
+package br.com.gecp.entity;
 
 import javax.persistence.*;
+
 import java.util.Date;
 
 @Entity
-public class Cliente {
+public class ClienteEntity {
 
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,15 +16,15 @@ public class Cliente {
 
     private Date dataCadastro;
 
-    @ManyToOne(targetEntity = Telefone.class)
-    private Telefone telefone;
+    @ManyToOne(targetEntity = TelefoneEntity.class)
+    private TelefoneEntity telefone;
 
-    @ManyToOne(targetEntity=Email.class)
-    private Email email;
+    @ManyToOne(targetEntity=EmailEntity.class)
+    private EmailEntity email;
 
 
-    @ManyToOne(targetEntity=Endereco.class)
-    private Endereco endereco;
+    @ManyToOne(targetEntity=EnderecoEntity.class)
+    private EnderecoEntity endereco;
 
 
     public Long getId() {
@@ -46,11 +47,11 @@ public class Cliente {
         this.dataCadastro = dataCadastro;
     }
 
-    public Telefone getTelefone() {
+    public TelefoneEntity getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Telefone telefone) {
+    public void setTelefone(TelefoneEntity telefone) {
         this.telefone = telefone;
     }
 }

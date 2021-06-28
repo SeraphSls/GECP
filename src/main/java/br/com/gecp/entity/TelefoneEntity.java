@@ -1,4 +1,4 @@
-package br.com.gecp.model;
+package br.com.gecp.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,21 +6,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Email {
+public class TelefoneEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private long ID;
+    private Long id;
 
-    public long getID() {
-        return ID;
+    private String numero;
+
+    private String tipo;
+
+
+    public Long getId() {
+        return id;
     }
 
-    public String getEmailContato() {
-        return emailContato;
+
+    public String getNumero() {
+        return numero;
     }
 
-    public void setEmailContato(String emailContato) {
-        this.emailContato = emailContato;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getTipo() {
@@ -30,10 +36,4 @@ public class Email {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
-    private String emailContato;
-
-    private String tipo;
-
-
 }
